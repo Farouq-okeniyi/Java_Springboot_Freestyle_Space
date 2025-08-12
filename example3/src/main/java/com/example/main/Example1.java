@@ -90,3 +90,12 @@ public class Example1 {
 
     }
 }
+//next is spring projects
+//we have springcore and spring mvc
+//we have spring boot
+//we have spring data
+//we have spring cloud
+//spring security
+//spring session 
+//spring integration
+//spring AMQP
