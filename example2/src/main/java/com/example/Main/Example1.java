@@ -1,10 +1,10 @@
 package com.example.Main;
-import java.beans.VetoableChangeListener;
+// import java.beans.VetoableChangeListener;
 
-import org.springframework.beans.factory.annotation.Configurable;
+// import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
+// import org.springframework.context.annotation.ComponentScan;
+// import org.springframework.context.annotation.Configuration;
 
 import com.example.beans.Vehicle;
 import com.example.config.projectConfig;
