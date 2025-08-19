@@ -21,10 +21,11 @@ public class projectconfig {
         return vehicle;
     }
     @Bean
-    public People people(){
+    // public People people(){ using default way of wiring
+    public People people(Vehicle vehicle){ //using method parameters forauto wiring
         People people = new People();   
         people.setName("farouq");
-        people.setVehicle(vehicle());
+        people.setVehicle(vehicle);
 
         return people;
     }
