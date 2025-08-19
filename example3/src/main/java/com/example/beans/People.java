@@ -9,12 +9,12 @@ public class People {
     // private String name;
     // private Vehicle vehicle;
     private String name = "lucy";
+    private Vehicle vehicle;
 
 
     //autowiring uing the Autiwired annotation
-    @Autowired
-    private Vehicle vehicle;
-
+    
+    
     public String getName(){
         return name;
     }
@@ -28,10 +28,11 @@ public class People {
     public Vehicle getVehicle(){
         return vehicle;
     }
+    @Autowired
     public void setVehicle(Vehicle vehicle){
         this.vehicle = vehicle;
     }
-    @Override
+    // @Override
     public String toString(){
         return "Person name is - "+ name;
     }
