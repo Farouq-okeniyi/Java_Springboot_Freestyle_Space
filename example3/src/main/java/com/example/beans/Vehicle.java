@@ -1,13 +1,13 @@
 package com.example.beans;
-// import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Component;
 // import javax.annotation.PostConstruct;
 // import javax.annotation.PreDestroy;
-// @Component
+@Component
 public class Vehicle {
     public Vehicle(){
         System.out.println("Vehicle beans created by springboot");
     }
-    private String name;
+    private String name = "Toyota";
 
 
     public String getName() {

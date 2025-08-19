@@ -1,34 +1,34 @@
 package com.example.config;
 // import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Bean;
+// import org.springframework.context.annotation.Bean;
 // import org.springframework.context.annotation.Primary;
-// import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.ComponentScan;
 // import the Vehicle class from the correct package
-import com.example.beans.Vehicle;
-import com.example.beans.People;
+// import com.example.beans.Vehicle;
+// import com.example.beans.People;
 
 
 @Configuration
-// @ComponentScan(basePackages = "com.example.beans")
+@ComponentScan(basePackages = "com.example.beans")
 public class projectconfig {
 
     //learing auto wiring
-    @Bean
-    public Vehicle vehicle(){
-        Vehicle vehicle = new Vehicle();
-        vehicle.setName("Toyota");
-        return vehicle;
-    }
-    @Bean
-    // public People people(){ using default way of wiring
-    public People people(Vehicle vehicle){ //using method parameters forauto wiring
-        People people = new People();   
-        people.setName("farouq");
-        people.setVehicle(vehicle);
+    // @Bean
+    // public Vehicle vehicle(){
+    //     Vehicle vehicle = new Vehi cle();
+    //     vehicle.setName("Toyota");
+    //     return vehicle;
+    // }
+    // @Bean
+    // // public People people(){ using default way of wiring
+    // public People people(Vehicle vehicle){ //using method parameters forauto wiring
+    //     People people = new People();   
+    //     people.setName("Farouq");
+    //     people.setVehicle(vehicle);
 
-        return people;
-    }
+    //     return people;
+    // }
 
     // @Primary
     // @Bean
