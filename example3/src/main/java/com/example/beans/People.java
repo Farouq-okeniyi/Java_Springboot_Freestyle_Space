@@ -1,6 +1,7 @@
 package com.example.beans;
 import org.springframework.stereotype.Component;
-import org.springframework.beans.factory.annotation.Autowired;
+// import org.springframework.beans.factory.annotation.Autowired;
+// import com.example.beans.Vehicle;
 @Component
 public class People {
     // public People() {
@@ -9,6 +10,11 @@ public class People {
     // private String name;
     // private Vehicle vehicle;
     private String name = "lucy";
+
+    public People(Vehicle vehicle){
+        System.out.println("person bean created by bean");
+        this.vehicle = vehicle;
+    }
     private Vehicle vehicle;
 
 
@@ -28,7 +34,7 @@ public class People {
     public Vehicle getVehicle(){
         return vehicle;
     }
-    @Autowired
+    // @Autowired
     public void setVehicle(Vehicle vehicle){
         this.vehicle = vehicle;
     }
