@@ -1,5 +1,7 @@
 package com.example.beans;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import com.example.beans.People;
 // import javax.annotation.PostConstruct;
 // import javax.annotation.PreDestroy;
 @Component
@@ -8,7 +10,13 @@ public class Vehicle {
         System.out.println("Vehicle beans created by springboot");
     }
     private String name = "Toyota";
+    //circular dependency
+    @Autowired
+    private People people;
 
+    public People getPeople(){
+        return people;
+    }
 
     public String getName() {
         return name;
