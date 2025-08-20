@@ -1,11 +1,15 @@
 package com.example.config;
 // import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-// import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Primary;
+
+import com.example.beans.Vehicle;
+
+import org.springframework.context.annotation.Bean;
 // import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.ComponentScan;
 // import the Vehicle class from the correct package
-// import com.example.beans.Vehicle;
+import com.example.beans.Vehicle;
 // import com.example.beans.People;
 
 
@@ -13,6 +17,28 @@ import org.springframework.context.annotation.ComponentScan;
 @ComponentScan(basePackages = "com.example.beans")
 public class projectconfig {
 
+    //auto wiring multile beans
+    @Bean
+    Vehicle vehicle1(){
+        var veh = new Vehicle();
+        veh.setName("audi");
+        return veh;
+
+    }
+    @Bean
+    Vehicle vehicle2(){
+        var veh = new Vehicle();
+        veh.setName("mercedes");
+        return veh;
+
+    }
+    @Bean 
+    // @Primary //second approach to autowire multiple beans
+    Vehicle vehicle3(){
+        var veh = new Vehicle();
+        veh.setName("Ferrari");
+        return veh;
+    }
     //learing auto wiring
     // @Bean
     // public Vehicle vehicle(){

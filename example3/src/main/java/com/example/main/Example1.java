@@ -20,9 +20,9 @@ public class Example1 {
         var context = new AnnotationConfigApplicationContext(projectconfig.class);
         //for learning auto wiring
         People person = context.getBean(People.class);
-        Vehicle vehicle = context.getBean(Vehicle.class);
+        // Vehicle vehicle = context.getBean(Vehicle.class);
         System.out.println("Person  name form spring Context is " + person.getName());
-        System.out.println("Vehicle  name form spring Context is " + vehicle.getName());
+        // System.out.println("Vehicle  name form spring Context is " + vehicle.getName());
         System.out.println("Vehicle  that person owns is " + person.getVehicle());
         //primary annotation beans usage
 
