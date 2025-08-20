@@ -11,12 +11,12 @@ public class Vehicle {
     }
     private String name = "Toyota";
     //circular dependency
-    @Autowired
-    private People people;
+    // @Autowired
+    // private People people;
 
-    public People getPeople(){
-        return people;
-    }
+    // public People getPeople(){
+    //     return people;
+    // }
 
     public String getName() {
         return name;
