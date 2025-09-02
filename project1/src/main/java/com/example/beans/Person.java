@@ -1,8 +1,10 @@
 package com.example.beans;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.context.annotation.Lazy;
 
 @Component(value = "personBean")
+@Lazy //lazy instantiation
 public class Person {
     private String name = "lucy";
     private final Vehicle vehicle;
