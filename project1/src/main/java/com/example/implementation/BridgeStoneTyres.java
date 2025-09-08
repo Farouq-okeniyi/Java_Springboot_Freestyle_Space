@@ -9,4 +9,8 @@ public class BridgeStoneTyres implements Tyres {
     public String rotate(){
         return "Rotating from BridgeStone Tyres";
     }
+
+    public String stop(){
+        return "stop from Bridgestone Tyres";
+    }
 }
