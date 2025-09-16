@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faz School</title>
+</head>
+<body>
+    <h1 th:text="'hello, ' + ${username} + ' !!! Welcome to Faz School'">Welcome to Faz School!</h1>
+
+    <!-- <table>
+        <thead>
+            <tr>
+                <th th:text ="#msgs.headers.name"></th>
+
+                <th th:text ="#msgs.headers.price"></th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="prod: ${allProducts}">
+                <td th:text:"${prod.name}">Oranges</td>
+                <td th:text:"${#numbers.formatDecimal(prod.price, 1,2)}">0.99</td>
+            </tr>
+        </tbody>
+    </table> -->
+</body>
+</html>

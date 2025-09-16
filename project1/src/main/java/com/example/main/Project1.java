@@ -43,7 +43,7 @@ public class Project1 {
         song.setArtist("Ed sheeran");
         song.setTitle("Shape of you");
 
-        boolean vehicleStarted = true;
+        boolean vehicleStarted = false;
 
         String moveVehicleStatus = vehicleServices.moveVehicle(vehicleStarted);
 
