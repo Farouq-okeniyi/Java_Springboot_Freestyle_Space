@@ -20,10 +20,10 @@ public class HolidayController {
     @GetMapping("/holidays/{display}")
     // public String displayHolidays(@RequestParam(required= false) Boolean festival, @RequestParam(required= false)Boolean federal, @RequestParam(required= false) Boolean religious, Model model){
     public String displayHolidays(@PathVariable String display, Model model){
-
         // model.addAttribute("festival", festival);
         // model.addAttribute("federal", federal);
         // model.addAttribute("religious", religious);
+
         if(null != display & display.equals("all")){
             model.addAttribute("festival", true);
             model.addAttribute("federal", true);
@@ -34,8 +34,6 @@ public class HolidayController {
             model.addAttribute("federal", true);
         }else if(null != display & display.equals("religious")){
             model.addAttribute("religious", true);
-        }else{
-            model.addAttribute(null);
         }
         
         List<Holiday> holidays = Arrays.asList(

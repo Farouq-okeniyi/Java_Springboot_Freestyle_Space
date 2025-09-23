@@ -1,4 +1,5 @@
 package com.eazybyte.faz_school.model;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data
